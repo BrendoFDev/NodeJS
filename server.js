@@ -10,8 +10,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 mongoose.connect(process.env.connectionString)
+
 .then(() => {
-    console.log('Conectado');
     app.emit('Conectado');
 })
 .catch(e => console.log(e));
